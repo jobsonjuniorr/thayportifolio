@@ -287,9 +287,8 @@ body {
 .about-text h3 {
     color: var(--titleWhite);
     margin-bottom: 10px;
-    font-size: 3.2rem;
-    font-weight: 400;
-    font-family: "Playfair Display",sans-serif;
+    font-size: 3rem;
+    font-family: "Lato",sans-serif;
     text-shadow: 
     1px 1px 2px rgba(0, 0, 0, 0.2), 
     2px 2px 6px rgba(0, 0, 0, 0.15);
@@ -426,7 +425,7 @@ body {
     font-size: 2.5rem;
     text-align: start;
     margin-bottom: 1rem;
-    font-family: "Playfair Display",sans-serif;
+    font-family: "Lato",sans-serif;
     text-shadow: 
     1px 1px 2px rgba(0, 0, 0, 0.2), 
     2px 2px 6px rgba(0, 0, 0, 0.15);
@@ -454,7 +453,7 @@ body {
 .categories h2{
     color: var(--titleWhite);
     margin-bottom: 0.5rem;
-    font-family: "Playfair Display",sans-serif;
+    font-family: "Lato",sans-serif;
 }
 .categories p{
     color: var(--paragraphWhite);
@@ -528,7 +527,7 @@ body {
     cursor: pointer;
     font-size: 20px;
     border-radius: 5px;
-    font-family: "Playfair Display",sans-serif;
+    font-family: "Lato",sans-serif;
 }
 
 .carrossel button.prev { left: 10px; }
@@ -616,7 +615,7 @@ body {
     margin-bottom: 1%;
     font-size: 2.5rem;
     margin-left: 1rem;
-    font-family: "Playfair Display",sans-serif;
+    font-family: "Lato",sans-serif;
 }
 .feedback-container-main {
     display: flex;
@@ -650,7 +649,7 @@ body {
     border-bottom: 3px solid var(--textHeadle);
     width: 100%;
     text-align: center;
-    font-family: "Playfair Display",sans-serif;
+    font-family: "Lora",sans-serif;
 }
 
 .main-box {
@@ -811,7 +810,7 @@ body {
     color: var(--title);
     margin-bottom: 1%;
     font-size: 2.5rem;
-    font-family: "Playfair Display",sans-serif;
+    font-family: "Lato",sans-serif;
 }
 
 .text-contact strong {
