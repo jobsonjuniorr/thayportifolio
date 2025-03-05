@@ -324,7 +324,7 @@ body {
     background-color: var(--color3);
     transform: scale(1.1);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1224px) {
     .about {
         height: auto;
         padding: 40px 20px;
@@ -334,6 +334,7 @@ body {
         flex-direction: column; 
         width: 100%;
         text-align: center;
+        margin-top: 3.2rem;
     }
 
     .about-img img {
@@ -353,7 +354,9 @@ body {
     .about {
         padding: 30px 10px;
     }
-
+    .about-box-center {
+        margin-top: 3.2rem;
+    }
     .about-img img {
         max-height: 250px;
     }
@@ -378,6 +381,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .about {
+        height: 100dvb;
+    }
+    .about-box-center {
+        margin-top: 2.5rem;
+    }
     .about-img img {
         max-height: 200px;
     }
@@ -1107,10 +1116,4 @@ footer p strong {
     .img-footer img:hover {
         transform: scale(1.1);
     }
-
-    footer p {
-        color: var(--paragraph);
-        font-size: 1rem;
-    }
-
 }
