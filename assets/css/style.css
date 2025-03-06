@@ -392,7 +392,6 @@ body {
     .about-box-text{
         max-height: 300px;
         max-width: 600px;
-        background-color: red;
     }
     .about-box-text p{
         color: var(--paragraphWhite);
