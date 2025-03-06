@@ -71,6 +71,7 @@
 html {
     scroll-padding-top: 70px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -134,7 +135,7 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--color6);
+    color: var(--fontcolor);
     border-bottom: 3px solid var(--paragraph);
 }
 
@@ -248,7 +249,7 @@ body {
 }
 
 .about {
-    height: 100vh;
+    height: 180vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -261,10 +262,64 @@ body {
     justify-content: center;
     width: 80%;
     gap: 40px;
-    height: 100%;
+    height: auto;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+.title-about{
+    margin-top: 4.5rem;
+    width: 75%;
+}
+.title-about h1{
+    color: var(--titleWhite);
+    font-size: 2.8rem;
+  
+}   
+.title-about strong{
+    color: var(--titleWhite);
+    font-weight: 200;
+    font-size: 3rem;
+    border-bottom: 2px solid var(--titleWhite);
+}   
+.about-box{
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
 }
 
+.about-box-last{
+    display: flex;
+    gap: 20px;
+}
+.about-box-text{
+    max-height: 150px;
+    max-width:500px;
+}
+.about-img-last{
+    background-color: var(--card);
+    padding: 10px;
+    border-radius: 20px; 
+}
+.about-img-last img{
+    max-height: 300px;
+    border-radius: 10%;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    animation: move 1s ease-in-out;
+    box-shadow: 0px 0px 10px 2px var(--titleWhite);
+}
+.about-img-last p{
+    max-width: 250px;
+    text-align: start;
+}
+.about-box-text p{
+    color: var(--paragraphWhite);
+    font-size: 1.5rem;
+    font-weight: 300;
+    border-bottom: 2px solid var(--titleWhite);
+    padding-bottom: 20px;
+    text-align: start;
+    text-indent: 1rem;
+}
 .about-img img {
     max-height: 400px;
     border-radius: 10%;
@@ -274,7 +329,6 @@ body {
 }
 
 .about-img img:hover {
-    transform: scale(1.05);
     box-shadow: 3px 3px 15px 2px var(--titleWhite);
 }
 
@@ -282,52 +336,48 @@ body {
     max-width: 500px;
     padding: 10px;
     animation: moveLeft 1s ease-in-out;
+    background-color: var(--card);
+    border-radius: 10px;
+    max-height: 350px;
 }
 
 .about-text h3 {
-    color: var(--titleWhite);
+    color: var(--background);
     margin-bottom: 10px;
     font-size: 3rem;
     font-family: "Lato",sans-serif;
     text-shadow: 
     1px 1px 2px rgba(0, 0, 0, 0.2), 
     2px 2px 6px rgba(0, 0, 0, 0.15);
-    border-bottom: 2px solid var(--paragraphWhite);
+    font-weight: 800;
+
 }
 
 .about-text p {
-    color: var(--paragraphWhite);
+    color: var(--background);
     font-size: 1.1rem;
     line-height: 1.4;
     text-align: start;
     font-family: "Lora", sans-serif;
     font-weight: 500;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    max-width: 400px;
+    text-indent: 1rem;
 }
 
-.about-medias {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px;
-}
-
-.socialMedia-icons {
-    max-height: 45px;
-    border-radius: 10px;
-    padding: 5px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.socialMedia-icons:hover {
-    background-color: var(--color3);
-    transform: scale(1.1);
-}
-@media (max-width: 1224px) {
+@media (min-width:769px) and (max-width: 1224px) {
     .about {
         height: auto;
         padding: 40px 20px;
+    }
+    .title-about{
+        width: 100%;
+        text-align: start;
+    }
+    .title-about h1{
+        color: var(--titleWhite);
+    }  
+    .about-img-last img{
+        max-height: 300px;
     }
 
     .about-box-center {
@@ -336,7 +386,28 @@ body {
         text-align: center;
         margin-top: 3.2rem;
     }
-
+    .about-box{
+        display: flex;
+    }
+    .about-box-text{
+        max-height: 300px;
+        max-width: 600px;
+        background-color: red;
+    }
+    .about-box-text p{
+        color: var(--paragraphWhite);
+        font-size: 1rem;
+        font-weight: 300;
+        border-bottom: 2px solid var(--titleWhite);
+        padding-bottom: 20px;
+        text-align: start;
+        text-indent: 1rem;
+    }
+    .about-box-last{
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
     .about-img img {
         max-height: 300px;
     }
@@ -353,14 +424,30 @@ body {
 @media (max-width: 768px) {
     .about {
         padding: 30px 10px;
+        height: 100%;
+    }
+    .about-box-center {
+        flex-direction: column; 
+        width: 100%;
+        text-align: center;
+        margin-top: 3.2rem;
     }
     .about-box-center {
         margin-top: 3.2rem;
     }
+    .title-about{
+        width: 100%;
+        text-align: start;
+    }
+    .title-about h1{
+        color: var(--titleWhite);
+    }  
     .about-img img {
         max-height: 250px;
     }
-
+    .about-img-last img{
+        max-height: 250px;
+    }
     .about-text h3 {
         font-size: 2rem;
     }
@@ -381,25 +468,115 @@ body {
 }
 
 @media (max-width: 480px) {
-    .about {
-        height: 100dvb;
+    
+.about-box-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    height: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+    .title-about{
+        margin-top: 1rem;
+        width: 100%;
+        text-align: start;
     }
-    .about-box-center {
-        margin-top: 2.5rem;
+    .title-about h1{
+        color: var(--titleWhite);
+        font-size: 1.8rem;
+      
+    }   
+    .title-about strong{
+        color: var(--titleWhite);
+        font-weight: 200;
+        font-size: 2rem;
+        border-bottom: 2px solid var(--titleWhite);
+    }  
+    .about-box{
+        display: flex;
+        justify-content: center;
+        gap: 10px; 
+        width: 100%;
+    }
+
+    .about-text {
+        max-width: 500px;
+        padding: 10px;
+        animation: moveLeft 1s ease-in-out;
+        background-color: var(--card);
+        border-radius: 10px;
+        max-height: 350px;
+    }
+    
+    .about-text h3 {
+        color: var(--background);
+        margin-bottom: 10px;
+        font-size:  1.5rem;
+        font-family: "Lato",sans-serif;
+        text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.2), 
+        2px 2px 6px rgba(0, 0, 0, 0.15);
+        text-align: start;
+    }
+    
+    .about-text p {
+        color: var(--background);
+        font-size: 1.1rem;
+        line-height: 1.4;
+        text-align: start;
+        font-family: "Lora", sans-serif;
+        font-weight: 500;
+        max-width: 200px;
+        text-indent: 1rem;
+    }
+    .about-box-last{
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+    .about-box-text{
+        max-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-box-text p{
+        color: var(--paragraphWhite);
+        font-size: 1rem;
+        font-weight: 300;
+        border-bottom: 2px solid var(--titleWhite);
+        padding-bottom: 20px;
+        text-align: start;
+        text-indent: 1rem;
+    }
+    .about-img-last{
+        background-color: var(--card);
+        padding: 10px;
+        border-radius: 20px; 
+    }
+    .about-img-last img{
+        max-height: 200px;
+        border-radius: 10%;
+        transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+        animation: move 1s ease-in-out;
+        box-shadow: 0px 0px 10px 2px var(--titleWhite);
+    }
+    .about-img-last p{
+        max-width: 250px;
+        text-align: start;
+    }
+    .about {
+        height: 100%;
     }
     .about-img img {
         max-height: 200px;
     }
-
-    .about-text h3 {
-        font-size: 1.8rem;
-        text-align: start;
-    }
-
     .about-text p {
         font-size: 0.9rem;
     }
-
     .socialMedia-icons {
         max-height: 35px;
     }
