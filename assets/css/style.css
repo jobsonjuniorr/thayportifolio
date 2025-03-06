@@ -273,7 +273,6 @@ body {
 .title-about h1{
     color: var(--titleWhite);
     font-size: 2.8rem;
-  
 }   
 .title-about strong{
     color: var(--titleWhite);
@@ -294,17 +293,18 @@ body {
 .about-box-text{
     max-height: 150px;
     max-width:500px;
+    animation: move 1s ease-in-out;
 }
 .about-img-last{
     background-color: var(--card);
     padding: 10px;
     border-radius: 20px; 
+    animation: moveLeft 1s ease-in-out;
 }
 .about-img-last img{
     max-height: 300px;
     border-radius: 10%;
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-    animation: move 1s ease-in-out;
     box-shadow: 0px 0px 10px 2px var(--titleWhite);
 }
 .about-img-last p{
@@ -350,7 +350,6 @@ body {
     1px 1px 2px rgba(0, 0, 0, 0.2), 
     2px 2px 6px rgba(0, 0, 0, 0.15);
     font-weight: 800;
-
 }
 
 .about-text p {
@@ -409,6 +408,99 @@ body {
     }
     .about-img img {
         max-height: 300px;
+    }
+
+    .about-text {
+        max-width: 90%;
+    }
+
+    .about-text h3 {
+        font-size: 2.5rem;
+    }
+}
+@media (min-width:1369px) and (max-width: 2560px) {
+    .about {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .title-about{
+        width: 65%;
+        text-align: start;
+    }
+    .title-about h1{
+        color: var(--titleWhite);
+        font-size:3rem;
+    }  
+    .title-about strong{
+        color: var(--titleWhite);
+        font-weight: 200;
+        font-size: 3.4rem;
+        border-bottom: 2px solid var(--titleWhite);
+    }  
+    .about-img-last img{
+        max-height: 400px;
+    }
+
+    .about-text {
+        width: 650px;
+        padding: 10px;
+        animation: moveLeft 1s ease-in-out;
+        background-color: var(--card);
+        border-radius: 10px;
+        max-height: 350px;
+    }
+    .about-box-center {
+        flex-direction: column; 
+        width: 100%;
+        text-align: center;
+        margin-top: 3.2rem;
+    }
+    .about-box{
+        display: flex;
+        width: 100%;
+    }
+    .about-box-text{
+        max-height: 300px;
+        max-width: 600px;
+    }
+    .about-text h3 {
+        color: var(--background);
+        margin-bottom: 10px;
+        font-size: 3rem;
+        font-family: "Lato",sans-serif;
+        text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.2), 
+        2px 2px 6px rgba(0, 0, 0, 0.15);
+        font-weight: 800;
+        text-align: start;
+    }
+    .about-box-text p{
+        color: var(--paragraphWhite);
+        font-size: 1.3rem;
+        font-weight: 300;
+        border-bottom: 2px solid var(--titleWhite);
+        padding-bottom: 20px;
+        text-align: start;
+        text-indent: 1rem;
+    }
+    .about-text p {
+        color: var(--background);
+        font-size: 1.3rem;
+        line-height: 1.4;
+        text-align: start;
+        font-family: "Lora", sans-serif;
+        font-weight: 500;
+        max-width: 100%;
+        text-indent: 1rem;
+    }
+    
+    .about-box-last{
+        display: flex;
+        gap: 10px;
+  
+    }
+    .about-img img {
+        max-height: 400px;
     }
 
     .about-text {
@@ -987,6 +1079,7 @@ body {
     margin-bottom: 1%;
     font-size: 2.5rem;
     font-family: "Lato",sans-serif;
+    margin-left: 1rem;
 }
 
 .text-contact strong {
@@ -1082,6 +1175,8 @@ form textarea {
         color: var(--title);
         margin-bottom: 1.5rem;
         font-size: 2rem;
+        text-align: center;
+        margin-left: 0;
     }
 
     form {
