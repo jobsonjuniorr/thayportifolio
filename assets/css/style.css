@@ -1,5 +1,5 @@
 :root {
-    --background: rgb(47, 54, 36);
+    --background: rgb(47, 54, 36) ;
     --card: #FCF7F1;
     --color3: #3A4C56;
     --title: #222;
@@ -7,6 +7,7 @@
     --paragraphWhite: #fff;
     --paragraph: #0c0c0c;
     --fontcolor: #222;
+    --azul:#3a4c56;
 
     --textHeadle: #FFD700;
     --buttonHover: rgba(47, 54, 36, 0.673);
@@ -270,7 +271,7 @@ body {
 }
 
 .about {
-    height: 180vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -281,7 +282,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     gap: 40px;
     height: auto;
     flex-wrap: wrap;
@@ -290,19 +291,25 @@ body {
 
 .title-about {
     margin-top: 4.5rem;
-    width: 75%;
+    width: 100%;
+    background-color: var(--card);
+    padding: 10px;
 }
 
 .title-about h1 {
-    color: var(--titleWhite);
-    font-size: 2.8rem;
+    color: var(--fontcolor);
+    font-size: 3.5rem;
+    font-family: "Anton",sans-serif;
+    line-height: 0.8;
+    text-align: center;
 }
 
 .title-about strong {
-    color: var(--titleWhite);
+    color: var(--fontcolor);
     font-weight: 200;
-    font-size: 3rem;
+    font-size: 2.2rem;
     border-bottom: 2px solid var(--titleWhite);
+    font-family: "Dancing Script", sans-serif;
 }
 
 .about-box {
@@ -310,18 +317,26 @@ body {
     justify-content: center;
     gap: 20px;
 }
-
+.about-box-ajuste {
+    display: flex;
+}
 .about-box-last {
     display: flex;
     gap: 20px;
 }
 
 .about-box-text {
-    max-height: 150px;
+    max-height: 100%;
     max-width: 500px;
     animation: move 1s ease-in-out;
+    display: flex;
+    align-items: end;
 }
-
+.about-text-aling{
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
 .about-img-last {
     background-color: var(--card);
     padding: 10px;
@@ -330,7 +345,7 @@ body {
 }
 
 .about-img-last img {
-    max-height: 300px;
+    max-height: 280px;
     border-radius: 10%;
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     box-shadow: 0px 0px 10px 2px var(--titleWhite);
@@ -343,12 +358,13 @@ body {
 
 .about-box-text p {
     color: var(--paragraphWhite);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     border-bottom: 2px solid var(--titleWhite);
     padding-bottom: 20px;
     text-align: start;
     text-indent: 1rem;
+    
 }
 
 .about-img img {
@@ -364,23 +380,19 @@ body {
 }
 
 .about-text {
-    max-width: 500px;
+    width: 350px;
     padding: 10px;
     animation: moveLeft 1s ease-in-out;
     background-color: var(--card);
     border-radius: 10px;
-    max-height: 350px;
+    max-height: 300px;
 }
 
 .about-text h3 {
     color: var(--background);
     margin-bottom: 10px;
-    font-size: 3rem;
-    font-family: "Lato", sans-serif;
-    text-shadow:
-        1px 1px 2px rgba(0, 0, 0, 0.2),
-        2px 2px 6px rgba(0, 0, 0, 0.15);
-    font-weight: 800;
+    font-size: 1.8rem;
+    font-family: "Anton", sans-serif;
 }
 
 .about-text p {
@@ -393,7 +405,9 @@ body {
     max-width: 400px;
     text-indent: 1rem;
 }
-
+.about-box-text-mobile{
+    display: none;
+}
 @media (min-width:769px) and (max-width: 1224px) {
     .about {
         height: auto;
@@ -632,24 +646,24 @@ body {
         height: auto;
         flex-wrap: wrap;
         flex-direction: column;
+        align-items: stretch;
     }
 
     .title-about {
         margin-top: 1rem;
         width: 100%;
-        text-align: start;
+        max-width: 100%;
+        
     }
 
     .title-about h1 {
-        color: var(--titleWhite);
-        font-size: 1.8rem;
-
+        font-size: 2rem;
+        color: var(--fontcolor);
     }
 
     .title-about strong {
-        color: var(--titleWhite);
         font-weight: 200;
-        font-size: 2rem;
+        font-size: 1.6rem;
         border-bottom: 2px solid var(--titleWhite);
     }
 
@@ -659,52 +673,60 @@ body {
         gap: 10px;
         width: 100%;
     }
-
-    .about-text {
-        max-width: 500px;
-        padding: 10px;
-        animation: moveLeft 1s ease-in-out;
-        background-color: var(--card);
-        border-radius: 10px;
-        max-height: 350px;
-    }
-
-    .about-text h3 {
-        color: var(--background);
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-        font-family: "Lato", sans-serif;
-        text-shadow:
-            1px 1px 2px rgba(0, 0, 0, 0.2),
-            2px 2px 6px rgba(0, 0, 0, 0.15);
-        text-align: start;
-    }
-
-    .about-text p {
-        color: var(--background);
-        font-size: 1.1rem;
-        line-height: 1.4;
-        text-align: start;
-        font-family: "Lora", sans-serif;
-        font-weight: 500;
-        max-width: 200px;
-        text-indent: 1rem;
-    }
-
-    .about-box-last {
+    .about-box-ajuste {
         display: flex;
-        gap: 10px;
-        width: 100%;
+        flex-direction: column;
     }
 
-    .about-box-text {
+    .about-box-text-mobile{
         max-height: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    .about-text {
+        max-width: 190px;
+        padding: 10px;
+        animation: moveLeft 1s ease-in-out;
+        background-color: var(--card);
+        border-radius: 10px;
+        max-height: 300px;
+    }
 
-    .about-box-text p {
+    .about-text h3 {
+        color: var(--background);
+        margin-bottom: 10px;
+        font-size: 1rem;
+        font-family: "Lato", sans-serif;
+        text-align: start;
+        width: 170px;
+    }
+
+    .about-text p {
+        color: var(--background);
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: start;
+        font-family: "Lora", sans-serif;
+        font-weight: 500;
+        max-width: 170px;
+        text-indent:1rem;
+    }
+
+    .about-box-last {
+        display: flex;
+        align-items: start;
+        gap: 0px;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0px;
+    }
+
+    .about-box-text {
+        display: none;
+    }
+
+    .about-box-text-mobile p {
         color: var(--paragraphWhite);
         font-size: 1rem;
         font-weight: 300;
@@ -712,6 +734,7 @@ body {
         padding-bottom: 20px;
         text-align: start;
         text-indent: 1rem;
+        margin-top: 2.5rem;
     }
 
     .about-img-last {
@@ -721,7 +744,7 @@ body {
     }
 
     .about-img-last img {
-        max-height: 200px;
+        max-height: 180px;
         border-radius: 10%;
         transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
         animation: move 1s ease-in-out;
@@ -729,14 +752,13 @@ body {
     }
 
     .about-img-last p {
-        max-width: 250px;
         text-align: start;
+        font-size: 1rem;
+        max-width: 190px;
     }
-
     .about {
         height: 100%;
     }
-
     .about-img img {
         max-height: 200px;
     }
@@ -745,9 +767,6 @@ body {
         font-size: 0.9rem;
     }
 
-    .socialMedia-icons {
-        max-height: 35px;
-    }
 }
 
 .working {
@@ -772,10 +791,7 @@ body {
     font-size: 2.5rem;
     text-align: start;
     margin-bottom: 1rem;
-    font-family: "Lato", sans-serif;
-    text-shadow:
-        1px 1px 2px rgba(0, 0, 0, 0.2),
-        2px 2px 6px rgba(0, 0, 0, 0.15);
+    font-family: "Anton", sans-serif;
 }
 
 .categories {
@@ -1148,7 +1164,8 @@ body {
     margin-bottom: 1%;
     font-size: 2.5rem;
     margin-left: 1rem;
-    font-family: "Lato", sans-serif;
+    font-family: "Anton", sans-serif;
+
 }
 
 .feedback-container-main {
@@ -1451,12 +1468,14 @@ body {
     color: var(--title);
     margin-bottom: 1%;
     font-size: 2.5rem;
-    font-family: "Lato", sans-serif;
+    font-family: "Anton", sans-serif;
     margin-left: 1rem;
 }
 
 .text-contact strong {
     color: var(--textHeadle);
+    font-family: "Anton", sans-serif;
+
 }
 
 form {
